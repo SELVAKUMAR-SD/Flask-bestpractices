@@ -1,2 +1,2 @@
-# ecommerce
-ecommerce using python mongo
+# Flask best practices
+Python Flask best practices
