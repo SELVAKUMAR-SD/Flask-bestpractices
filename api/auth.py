@@ -15,7 +15,7 @@ def decode_auth_token(auth_token):
     """
     Decodes the auth token
     :param auth_token:
-    :return: integer|error respons
+    :return: integer|error response
     """
     if not auth_token:
         raise UnauthorizedError(strings.TOKEN_MISSING)
