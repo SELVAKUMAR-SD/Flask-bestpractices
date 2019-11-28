@@ -14,6 +14,13 @@ DB_URL = 'postgresql://{}:{}@{}:{}/{}'.format(
     os.getenv('POSTGRES_PORT', '5432'),
     os.getenv('POSTGRES_DB', ''))
 
+TEST_DB_URL = 'postgresql://{}:{}@{}:{}/{}'.format(
+    os.getenv('POSTGRES_TEST_USER', ''),
+    os.getenv('POSTGRES_TEST_PASSWORD', ''),
+    os.getenv('POSTGRES_TEST_HOST', ''),
+    os.getenv('POSTGRES_TEST_PORT', '5432'),
+    os.getenv('POSTGRES_TEST_DB', ''))
+
 DB_POOL_SIZE = int(os.getenv('DB_POOL_SIZE', '10'))
 DB_MAX_OVERFLOW = int(os.getenv('DB_MAX_OVERFLOW', '-1'))
 
@@ -36,3 +43,5 @@ JWT_REFRESH_TOKEN_TIMEOUT_MINUTES = int(
     os.getenv('JWT_REFRESH_TOKEN_TIMEOUT_MINUTES', '600'))
 ENABLE_AUTH = bool(os.getenv('ENABLE_AUTH', 'False') == 'True')
 PASSWORD_LENGTH = int(os.getenv('PASSWORD_LENGTH', '8'))
+DEFAULT_PAGINATION_LIMIT = 15
+PATH_TO_MIGRATIONS = 'migrations'

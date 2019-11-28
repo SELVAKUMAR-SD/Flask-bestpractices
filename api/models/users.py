@@ -36,17 +36,15 @@ class User(BaseModel):
 
     __serialize_attributes__ = (
         'uuid', 'first_name', 'last_name', 'phone_no', 'email', 'age', 'role',
-        'img_url', 'referral_code', 'referrer_uuid', 'status', 'balance',
-        'country_code', 'created_at', 'currency')
+        'img_url', 'status')
 
     __updatable_attributes__ = (
         'first_name', 'last_name', 'phone_no', 'age', 'img_url',
-        'referral_code', 'referrer_uuid', 'status', 'password_hash',
-        'temporary_password', 'balance', 'country_code')
+        'status', 'password_hash', 'temporary_password')
 
     __payload_allowed_attributes__ = (
         'email', 'password', 'phone_no', 'first_name', 'last_name', 'age',
-        'img_url', 'referral_code')
+        'img_url')
 
     __table_args__ = (UniqueConstraint('email', 'role',
                                        name='uix_email_role'),)
