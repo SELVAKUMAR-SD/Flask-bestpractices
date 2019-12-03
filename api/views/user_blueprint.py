@@ -96,6 +96,7 @@ def delete(uuid):
     :param uuid: User uuid
     :return: No content response
     """
+    # Add message
     has_access(uuid)
 
     return REST.delete(User, uuid, obj=request.user)
