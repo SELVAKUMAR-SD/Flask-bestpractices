@@ -1,0 +1,8 @@
+[MESSAGE]
+
+disable = fixme
+
+[SIMILARITIES]
+# ignore imports when computing similarities
+ignore-imports=yes
+min-similarity-lines=5
